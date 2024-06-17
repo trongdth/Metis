@@ -13,6 +13,8 @@
 ## Decentralized Sequencer
 
 * [Overview](decentralized-sequencer/overview/README.md)
+  * [Transaction cycle](decentralized-sequencer/overview/transaction-cycle.md)
+  * [Block finality](decentralized-sequencer/overview/block-finality.md)
   * [Sequencer node](decentralized-sequencer/overview/sequencer-node.md)
   * [MPC module](decentralized-sequencer/overview/mpc-module.md)
   * [Bridge module](decentralized-sequencer/overview/bridge-module.md)

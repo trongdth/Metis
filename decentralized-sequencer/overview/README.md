@@ -9,7 +9,8 @@ We have launched a Decentralized Sequencer Pool to achieve full decentralization
 To achieve that, we utilize such technologies:
 
 * [Tendermint consensus](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html) developed developed by Cosmos
-* [Threshold Signature Scheme](https://github.com/bnb-chain/tss-lib) (TSS) Multi Party Computation (MPC)
+* [Threshold Signature Scheme](https://github.com/bnb-chain/tss-lib) (TSS)&#x20;
+* Multi Party Computation (MPC)
 * [Libp2p](https://libp2p.io/)
 * L2 Geth and others
 
