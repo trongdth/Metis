@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Building On Metis L2](README.md)
+* [Beginners table](README.md)
+* [Building On Metis L2](<README (1).md>)
   * [Connection Details](readme/connection-details.md)
   * [Faucet - Get Test Tokens](get-started/getting-test-tokens.md)
   * [Wallet Setting](readme/metamask-setting-how-to-connect-your-metamask-crypto-wallet-to-metis-platform.md)
@@ -39,7 +40,6 @@
 
 ## Support
 
-* [Beginners table](support/beginners-table.md)
 * [Help Center](support/help-center.md)
 * [Metis Audits](support/metis-audits.md)
 * [Bug Bounty](https://immunefi.com/bounty/metis/)
