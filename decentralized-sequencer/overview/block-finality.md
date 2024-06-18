@@ -1,4 +1,4 @@
-# Block finality
+# Finilizing the block
 
 This document outlines the process and methodologies used to obtain the finalized block number in the Metis chain environment. It specifically addresses the retrieval methods via Layer 2 (L2) RPC and Layer 1 (L1) Smart Contract (SCC) checks, along with the operational timings for batch submissions.
 
