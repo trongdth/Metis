@@ -1,5 +1,7 @@
 # Transaction cycle
 
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ## **Overview**
 
 This document outlines the transaction lifecycle within the Metis Andromeda Decentralized Sequencer Pool system.
