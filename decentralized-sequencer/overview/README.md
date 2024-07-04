@@ -4,7 +4,7 @@
 
 In this section we are going to shortly describe the overall system overview on which the decentralized sequencer pool was built upon.
 
-We have launched a Decentralized Sequencer Pool to achieve full decentralization in Layer 2 networks and avoid the single-point failures derived from centralized sequencers. This is a key step towards making our L2 network fully decentralized. It works with our existing decentralized P2P validators and block producer network to enable smooth and secure sequencer transitions, and the removal of faulty or malicious nodes. This ensures the network's long-term stability and creates a continuous, stable, and community-driven model.
+We have launched a Decentralized Sequencer Pool to achieve full decentralization in Layer 2 networks and avoid the single-point failures derived from centralized sequencers. This is a key step towards making our L2 network fully decentralized. It works with our existing decentralized P2P network to enable smooth and secure sequencer transitions, and the removal of faulty or malicious nodes. This ensures the network's long-term stability and creates a continuous, stable, and community-driven model.
 
 To achieve that, we utilize such technologies:
 
@@ -22,3 +22,5 @@ Simplified transaction flow overview:
 4. Multi-party computation (MPC) nodes combine the blocks and send them to the Ethereum main chain. This completes the transaction.
 
 A comprehensive flowchart can be found [here](https://drive.google.com/drive/folders/1tKS3bk-fWICfm38h2wqtX3SZoB26P-\_U).
+
+To apply for decentralized sequencer operator, you will need 20,000 Metis tokens locked in the node. More info [here](https://sequencer.metis.io/).
