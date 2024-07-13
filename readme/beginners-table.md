@@ -1,5 +1,7 @@
 # Beginners table
 
+
+
 <details>
 
 <summary>Update for Shagnhai EVM</summary>
@@ -83,6 +85,88 @@ curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application
 </details>
 
 <table><thead><tr><th width="197">Basic info</th><th width="284">Mainnet</th><th>Testnet</th></tr></thead><tbody><tr><td>Add network to your wallet</td><td><a href="https://chainlist.org/chain/1088">Andromeda</a></td><td> Sepolia</td></tr><tr><td>Solidity version</td><td>0.8.26</td><td>Same as mainnet</td></tr><tr><td>RPC</td><td>https://andromeda.metis.io/?owner=1088</td><td>https://sepolia.metisdevops.link</td></tr><tr><td>Fork of EVM</td><td>Berlin</td><td>Same as mainnet</td></tr><tr><td>Unsupported EIPs</td><td><p>EIPs from Shanghai update are not supported for now (check the notice at the top)</p><p>Also 1559, 4337 arent supported.</p></td><td>Same as mainnet</td></tr><tr><td>Unsupported infra</td><td><ul><li>Tenderly (use paid <a href="https://www.alchemy.com/">Alchemy</a>)</li><li>The Graph (use <a href="https://www.ormilabs.xyz/">Ormigraph</a> or paid <a href="https://www.alchemy.com/">Alchemy</a>)</li></ul></td><td>Same as mainnet</td></tr><tr><td>Gas fee formula</td><td>Manual setup for now</td><td>Same as mainnet</td></tr><tr><td>Faucet for test tokens</td><td>Nope</td><td><a href="https://faucet-427702.uc.r.appspot.com/">Link</a></td></tr></tbody></table>
+
+<details>
+
+<summary>Update for Shagnhai EVM</summary>
+
+**1. PUSH0 opcode**
+
+You can use shanghai evm version in your project.
+
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.20;
+contract MetisShanghaiUpgradeExample {
+    uint256 public num;
+    function push0(uint256 _n) public {
+        num = _n;
+    }
+}
+```
+
+**2. More user-friendly error from the rpc**
+
+The RPC can return encoded custom errors and solidity panic errors
+
+**Custom errors**
+
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.20;
+error MyError();
+contract MetisShanghaiUpgradeExample {
+    function customError() public pure {
+        revert MyError();
+    }
+}
+```
+
+```sh
+curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application/json" \
+  --data '{"method":"eth_call","params":[{"to":"0x2e07967571dB8896178A65039b4Dd13Be354B002","input":"0xdda3a7bd"}, "latest"],"id":1,"jsonrpc":"2.0"}'
+```
+
+**the error data 0xdd6c951c is for the custom error MyError**
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "error": { "code": 3, "message": "execution reverted", "data": "0xdd6c951c" }
+}
+```
+
+**Solidity panic errors**
+
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.20;
+contract MetisShanghaiUpgradeExample {
+    function panicError(uint256 _x) public pure returns (uint256){
+        return _x / 0;
+    }
+}
+```
+
+```sh
+curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application/json" \
+  --data '{"method":"eth_call","params":[{"to":"0x2e07967571dB8896178A65039b4Dd13Be354B002","input":"0x67c9d7930000000000000000000000000000000000000000000000000000000000000001"}, "latest"],"id":1,"jsonrpc":"2.0"}'
+```
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "error": {
+    "code": 3,
+    "message": "execution reverted: division or modulo by zero",
+    "data": "0x4e487b710000000000000000000000000000000000000000000000000000000000000012"
+  }
+}
+```
+
+</details>
 
 ## Canonical contract addresses of tokens
 
