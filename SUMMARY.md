@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Building On Metis L2](README.md)
-  * [Beginners table](readme/beginners-table.md)
+  * [Quick start](readme/quick-start.md)
   * [Connection Details](readme/connection-details.md)
   * [Faucet - Get Test Tokens](get-started/getting-test-tokens.md)
   * [Wallet Setting](readme/metamask-setting-how-to-connect-your-metamask-crypto-wallet-to-metis-platform.md)
