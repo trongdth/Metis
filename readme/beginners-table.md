@@ -36,13 +36,16 @@ contract MetisShanghaiUpgradeExample {
 }
 ```
 
+{% code overflow="wrap" %}
 ```sh
 curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application/json" \
   --data '{"method":"eth_call","params":[{"to":"0x2e07967571dB8896178A65039b4Dd13Be354B002","input":"0xdda3a7bd"}, "latest"],"id":1,"jsonrpc":"2.0"}'
 ```
+{% endcode %}
 
-**the error data 0xdd6c951c is for the custom error MyError**
+**The error data 0xdd6c951c is for the custom error MyError**
 
+{% code overflow="wrap" %}
 ```json
 {
   "jsonrpc": "2.0",
@@ -50,6 +53,7 @@ curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application
   "error": { "code": 3, "message": "execution reverted", "data": "0xdd6c951c" }
 }
 ```
+{% endcode %}
 
 **Solidity panic errors**
 
@@ -63,11 +67,14 @@ contract MetisShanghaiUpgradeExample {
 }
 ```
 
+{% code overflow="wrap" %}
 ```sh
 curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application/json" \
   --data '{"method":"eth_call","params":[{"to":"0x2e07967571dB8896178A65039b4Dd13Be354B002","input":"0x67c9d7930000000000000000000000000000000000000000000000000000000000000001"}, "latest"],"id":1,"jsonrpc":"2.0"}'
 ```
+{% endcode %}
 
+{% code overflow="wrap" %}
 ```json
 {
   "jsonrpc": "2.0",
@@ -79,6 +86,7 @@ curl https://l2rpc.devnet.metisdevops.link -X POST -H "Content-Type: application
   }
 }
 ```
+{% endcode %}
 
 </details>
 
