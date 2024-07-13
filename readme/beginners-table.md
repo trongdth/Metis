@@ -2,7 +2,7 @@
 
 <details>
 
-<summary>Update for Shagnhai EVM</summary>
+<summary>Update for Shagnhai EVM features</summary>
 
 **1. PUSH0 opcode**
 
